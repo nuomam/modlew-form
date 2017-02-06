@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {:registrations => "users/registrations"}
   root to: 'pages#home'
-  ressources :registration_steps
+  resources :registration_steps
+  get '/confirmation/', to: 'pages#confirmation', as: 'confirmation'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
