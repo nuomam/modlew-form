@@ -1,13 +1,92 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <% if user_signed_in? %>
-        <p>Votre inscription a bien ete prise en compte.</p>
-        <p>Nous vous contacterons si vous etes selectionne</p>
-        <p>Si vous souhaitez relancer une inscription, <%= link_to('cliquez ici', destroy_user_session_path, :method => :delete) %>.</p>
-      <% else %>
-        <%= link_to('Postuler pour être client tsteur', new_user_registration_path)  %>
-      <% end %>
+<div class="wrapper-orange padded">
+  <div class="container">
+    <h4>ACCUEIL DE LA COMMUNAUTÉ DES TESTEURS</h4>
+  </div>
+</div>
+<div class="wrapper-grey padded">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="content-container">
+          <h3>Comment ça marche ?</h3>
+          <div class="row steps">
+            <div class="col-xs-12 col-sm-3">
+              <div class="step">
+                <img src="http://placehold.it/150x150" alt="">
+                <p>Vous recevez votre tondeuse</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="step">
+                <img src="http://placehold.it/150x150" alt="">
+                <p>Vous la testez</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="step">
+                <img src="http://placehold.it/150x150" alt="">
+                <p>Vous témoignez de son utilisation</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="step">
+                <img src="http://placehold.it/150x150" alt="">
+                <p>La tondeuse vous est offerte !</p>
+              </div>
+            </div>
+          </div>
+          <% if user_signed_in? %>
+            <p>Votre inscription a bien ete prise en compte.</p>
+            <p>Nous vous contacterons si vous etes selectionne</p>
+            <p>Si vous souhaitez relancer une inscription, <%= link_to('cliquez ici', destroy_user_session_path, :method => :delete) %>.</p>
+          <% else %>
+            <%= link_to 'JE POSTULE >', new_user_registration_path, class: "btn-weldom-form"  %>
+          <% end %>
+        </div>
+        <div class="content-container">
+          <h3>Nos clients ont testés ces produits</h3>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="product-tested">
+                <img src="http://placehold.it/100x100" alt="">
+                <div class="product-tested-content">
+                  <h4>Outil multifonction</h4>
+                  <p>Découvez ici ce qu'en pensent nos clients testeurs, et visualisez les en conditions réelles.</p>
+                  <a href="" class="btn-home-review">voir les avis publiés ></a>
+                </div>
+              </div>
+              <div class="product-tested">
+                <img src="http://placehold.it/100x100" alt="">
+                <div class="product-tested-content">
+                  <h4>Colle Patex</h4>
+                  <p>Découvez ici ce qu'en pensent nos clients testeurs, et visualisez les en conditions réelles.</p>
+                  <a href="" class="btn-home-review">voir les avis publiés ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="product-tested">
+                <img src="http://placehold.it/100x100" alt="">
+                <div class="product-tested-content">
+                  <h4>Savon Fiel de Boeuf</h4>
+                  <p>Découvez ici ce qu'en pensent nos clients testeurs, et visualisez les en conditions réelles.</p>
+                  <a href="" class="btn-home-review">voir les avis publiés ></a>
+                </div>
+              </div>
+              <div class="product-tested">
+                <img src="http://placehold.it/100x100" alt="">
+                <div class="product-tested-content">
+                  <h4>Peinture Luxens</h4>
+                  <p>Découvez ici ce qu'en pensent nos clients testeurs, et visualisez les en conditions réelles.</p>
+                  <a href="" class="btn-home-review">voir les avis publiés ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

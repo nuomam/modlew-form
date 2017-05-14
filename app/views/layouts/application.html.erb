@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link rel="stylesheet" type="text/css" href="https://www.weldom.fr/media/css_secure/4ebe72c4697e54f00b76dce16e9b1234.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://www.weldom.fr/media/css_secure/dd10aca6761bbe3d5cc9d9fd642ef90e.css" media="all">
   </head>
   <body>
     <% render 'shared/weldom_header' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>

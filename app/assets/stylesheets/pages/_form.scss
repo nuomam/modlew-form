@@ -1,0 +1,34 @@
+.padded {
+  padding: 50px;
+}
+
+.wrapper-orange {
+  background-color: $orange;
+}
+
+.wrapper-grey {
+  background-color: $light-grey;
+}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.btn-weldom-form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: $orange;
+  color: white;
+  border-radius: 0;
+  border: 0px;
+  margin-top: 20px;
+  padding: 10px 40px;
+}
+
+.btn-weldom-form:hover {
+  color: white;
+}

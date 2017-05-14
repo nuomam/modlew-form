@@ -1,7 +1,7 @@
 class RegistrationStepsController < ApplicationController
   include Wicked::Wizard
 
-  steps :user_social_media, :user_motivation
+  steps :user_information
 
   def show
     @user = current_user
