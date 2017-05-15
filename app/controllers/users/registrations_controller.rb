@@ -50,16 +50,16 @@ before_action :configure_account_update_params, only: [:update]
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :address, :postal_code, :city, :policy_agreement, :weldom_newsletter])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :address, :postal_code, :city, :policy_agreement, :weldom_newsletter, :photo])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation, :photo])
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :address, :postal_code, :city, :policy_agreement, :weldom_newsletter, :facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation)
+    params.require(:user).permit(:first_name, :last_name, :email, :address, :postal_code, :city, :policy_agreement, :weldom_newsletter, :facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation, :photo, :construction_surface, :construction_type, :weldom_tester)
   end
 
   # The path used after sign up.

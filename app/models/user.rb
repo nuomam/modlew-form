@@ -11,5 +11,5 @@ class User < ApplicationRecord
   validates :postal_code, presence: true, format: { with: /(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}/ }
   validates :city, presence: true
   validates :policy_agreement, presence: true
-
+  has_attachment :photo
 end
