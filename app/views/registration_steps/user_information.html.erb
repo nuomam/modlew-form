@@ -15,10 +15,10 @@
             <%= f.error_notification %>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :construction_type, autofocus: true, label: "Type de chantier" %>
+                <%= f.input :construction_type, autofocus: true, label: "Type de chantier", collection: ['Repeindre un meuble de cuisine', 'Repeindre un escalier', 'Repeindre un carrelage de salle de bain'], prompt: "Choisir un type de contruction" %>
               </div>
               <div class="col-xs-6">
-                <%= f.input :construction_surface, autofocus: true, label: "Surface du chantier" %>
+                <%= f.input :construction_surface, autofocus: true, label: "Surface du chantier (en m2)" %>
               </div>
               <div class="col-xs-12">
                 <%= f.input :photo, as: :attachinary %>

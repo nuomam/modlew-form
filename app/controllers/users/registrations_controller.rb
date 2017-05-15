@@ -59,7 +59,7 @@ before_action :configure_account_update_params, only: [:update]
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :address, :postal_code, :city, :policy_agreement, :weldom_newsletter, :facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation, :photo, :construction_surface, :construction_type, :weldom_tester)
+    params.require(:user).permit(:first_name, :last_name, :email, :address, :postal_code, :city, :policy_agreement, :weldom_newsletter, :facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation, :photo, :construction_surface, :construction_type, :weldom_tester, :general_diy, :electricity, :plumbing, :building, :gardening, :decoration)
   end
 
   # The path used after sign up.
