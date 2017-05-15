@@ -1,6 +1,9 @@
-<div class="wrapper-orange padded">
-  <h2>DEVENEZ CLIENT TESTEUR !</h2>
-  <h4>ETAPE 2 - POUR MIEUX VOUS CONNAITRE</h4>
+<div class="wrapper-orange">
+  <div class="banner-title">
+    <h2>DEVENEZ CLIENT TESTEUR !</h2>
+    <h4>ETAPE 2 - POUR MIEUX VOUS CONNAITRE</h4>
+  </div>
+  <%= image_tag "weldom_banner" %>
 </div>
 <div class="wrapper-grey padded">
   <div class="container">
@@ -12,30 +15,47 @@
           <%= simple_form_for @user, url: wizard_path do |f| %>
             <%= f.error_notification %>
 
-            <div class="form-inputs">
+              <%= f.input :facebook_profile, autofocus: true, label: "Profil Facebook" %>
+              <%= f.input :twitter_profile, autofocus: true, label: "Profil twitter" %>
+              <%= f.input :instagram_profile, autofocus: true, label: "Profil instagram" %>
+              <%= f.input :youtube_channel, autofocus: true, label: "Chaine Youtube" %>
+              <%= f.input :personnal_blog, autofocus: true, label: "Blog personnel" %>
+
+
+
+
+<!--             <div class="form-inputs">
               <div class="form-group">
-                <div class="input-group">Facebook :
+                <div class="input-group"><p>Facebook :</p>
                   <div class="input-group-addon">http://www.facebook.com/</div>
                   <%= f.input :facebook_profile, autofocus: true, label: false %>
                 </div>
                 <div class="input-group">Twitter :
                   <div class="input-group-addon">http://twitter.com/</div>
-                    <%= f.input :twitter_profile, autofocus: true, label: false %>
+                  <%= f.input :twitter_profile, autofocus: true, label: false %>
                 </div>
-              <%= f.input :instagram_profile, autofocus: true %>
-              <%= f.input :youtube_channel, autofocus: true %>
-              <%= f.input :personnal_blog, autofocus: true %>
+                <div class="input-group">Instragram :
+                  <div class="input-group-addon">http://instagram.com/</div>
+                  <%= f.input :instagram_profile, autofocus: true, label: false %>
+                </div>
+                <div class="input-group">Youtube :
+                  <div class="input-group-addon">http://youtube.com/</div>
+                  <%= f.input :youtube_channel, autofocus: true, label: false %>
+                </div>
+              <div class="input-group input-inline">Blog personnel :
+                <%= f.input :personnal_blog, autofocus: true, label: false %>
+              </div>
             </div>
 
-          </div>
+          </div> -->
         </div>
-        <div class="form-container">
+        <div class="form-container container-btn">
           <p>Nos clients testeurs rédigeront leurs avis sur nos produits. Pouvez-vous nous parler
           d'une de vos réalisations en quelques lignes ? Ce texte restera confidentiel, il nous
           donnera un aperçu de votre style rédactionnel.</p>
           <%= f.input :motivation, autofocus: true %>
           <div class="form-actions">
-            <%= f.submit "JE FINALISE MON INSCRIPTION", class: "btn-weldom-form" %>
+            <%= f.submit "JE FINALISE MON INSCRIPTION >", class: "btn-weldom-form" %>
           </div>
         </div>
 

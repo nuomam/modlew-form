@@ -1,6 +1,10 @@
-<div class="wrapper-orange padded">
+<div class="wrapper-orange">
   <div class="container">
-    <h4>ACCUEIL DE LA COMMUNAUTÉ DES TESTEURS</h4>
+    <div class="home-banner">
+      <%= image_tag "weldom-home-banner" %>
+      <h2>BIENVENUE DANS<br />LA COMMUNAUTE DES TESTEURS<br />WELDOM</h2>
+    </div>
+    <p class="menu-link"><%= image_tag "icon-home" %> ACCUEIL DE LA COMMUNAUTÉ DES TESTEURS</p>
   </div>
 </div>
 <div class="wrapper-grey padded">
@@ -13,25 +17,25 @@
           <div class="row steps">
             <div class="col-xs-12 col-sm-3">
               <div class="step">
-                <img src="http://placehold.it/150x150" alt="">
+                <%= image_tag "step-1", width: 150, height: 150 %>
                 <p>Vous recevez votre tondeuse</p>
               </div>
             </div>
             <div class="col-xs-12 col-sm-3">
               <div class="step">
-                <img src="http://placehold.it/150x150" alt="">
+                <%= image_tag "step-2", width: 150, height: 150 %>
                 <p>Vous la testez</p>
               </div>
             </div>
             <div class="col-xs-12 col-sm-3">
               <div class="step">
-                <img src="http://placehold.it/150x150" alt="">
+                <%= image_tag "step-3", width: 150, height: 150 %>
                 <p>Vous témoignez de son utilisation</p>
               </div>
             </div>
             <div class="col-xs-12 col-sm-3">
               <div class="step">
-                <img src="http://placehold.it/150x150" alt="">
+                <%= image_tag "step-4", width: 150, height: 150 %>
                 <p>La tondeuse vous est offerte !</p>
               </div>
             </div>

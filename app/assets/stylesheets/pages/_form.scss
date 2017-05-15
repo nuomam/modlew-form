@@ -1,13 +1,29 @@
-.padded {
-  padding: 50px;
-}
-
 .wrapper-orange {
   background-color: $orange;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  h2 {
+    color: white;
+    font-family: "CardenioModern", "Arial";
+    font-size: 50px;
+  }
+  h4 {
+    color: white;
+    font-family: "CardenioModern", "Arial";
+    font-size: 40px;
+    font-weight: normal;
+  }
+}
+
+.banner-title {
+  padding-top: 4em;
 }
 
 .wrapper-grey {
   background-color: $light-grey;
+  padding: 30px 0px;
 }
 
 .form-container {
@@ -15,6 +31,7 @@
   padding: 20px;
   margin-top: 10px;
   position: relative;
+  box-shadow: 2px 2px 2px 0px rgba(161,161,161,1);
 }
 
 .btn-weldom-form {
@@ -30,5 +47,24 @@
 }
 
 .btn-weldom-form:hover {
-  color: white;
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+#user_address {
+  height: 30px;
+}
+
+#user_motivation {
+  height: 150px;
+}
+
+.form-agreement .form-group {
+  margin-bottom: 0px;
+}
+
+
+.container-btn {
+  padding-bottom: 60px;
 }
