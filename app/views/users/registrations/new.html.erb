@@ -26,6 +26,19 @@
                   <%= f.input :city, label: 'VILLE', required: true, autofocus: true, error: 'Veuillez renseigner votre ville.' %>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <p>Dites nous les domaines que vous aimez et dans lesquels vous souhaiteriez tester un produit</p>
+                  <div class="form-product">
+                    <%= f.input :general_diy, label: "Bricolage général"%>
+                    <%= f.input :electricity, label: "Electricité"%>
+                    <%= f.input :plumbing, label: "Plomberie"%>
+                    <%= f.input :building, label: "Batiment"%>
+                    <%= f.input :gardening, label: "Jardinage"%>
+                    <%= f.input :decoration, label: "Décoration"%>
+                  </div>
+                </div>
+              </div>
 
               <div class="form-agreement">
                 <%= f.input :policy_agreement, label: "J'accepte le règlement.", required: true, autofocus: true, error: 'Veuillez accepter le règlement.' %>
