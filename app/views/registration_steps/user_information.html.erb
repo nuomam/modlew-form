@@ -15,13 +15,18 @@
             <%= f.error_notification %>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :construction_type, autofocus: true, label: "Type de chantier", collection: ['Repeindre un meuble de cuisine', 'Repeindre un escalier', 'Repeindre un carrelage de salle de bain'], prompt: "Choisir un type de contruction" %>
+                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier", collection: ['Repeindre un meuble de cuisine', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépi (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de contruction" %>
               </div>
               <div class="col-xs-6">
-                <%= f.input :construction_surface, autofocus: true, label: "Surface du chantier (en m2)" %>
+                <%= f.input :construction_surface, autofocus: true, label: "Estimation de surface à peindre (1 couche) en m2" %>
               </div>
-              <div class="col-xs-12">
-                <%= f.input :photo, as: :attachinary %>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <%= f.input :photo, as: :attachinary, label: "Téléchargement de la photo du chantier à réaliser" %>
+              </div>
+              <div class="col-xs-6">
+                <%= f.input :construction_color, label: "Choix de la couleur", collection: ['blanc', 'gris clair', 'taupe', 'rouge', 'bleu', 'je ne sais pas'], prompt: "Choisir une couleur" %>
               </div>
             </div>
         </div>
@@ -64,11 +69,20 @@
         </div>
         <div class="form-container container-btn">
           <p>Nos clients testeurs rédigeront leurs avis sur nos produits. Pouvez-vous nous parler
-          d'une de vos réalisations en quelques lignes ? Ce texte restera confidentiel, il nous
+          de votre projet en quelques lignes ? Ce texte restera confidentiel, il nous
           donnera un aperçu de votre style rédactionnel.</p>
           <%= f.input :motivation, autofocus: true %>
+          <div class="form-inline">
+            <%= f.input :weldom_tester,
+              required: true,
+              collection: [[true, 'Oui'], [false, 'Non']],
+              label_method: :last,
+              label: "En cas de fort enthousiasme pour le produit, seriez-vous prêt à en faire une démonstration en magasin ?",
+              as: :radio_buttons,
+              checked: true %>
+          </div>
           <div class="form-actions">
-            <%= f.submit "JE FINALISE MON INSCRIPTION >", class: "btn-weldom-form" %>
+            <%= f.submit "JE VALIDE MON INSCRIPTION >", class: "btn-weldom-form" %>
           </div>
         </div>
 

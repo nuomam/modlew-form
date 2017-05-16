@@ -17,26 +17,14 @@
               <div class="row">
                 <div class="col-xs-6">
                   <%= f.input :last_name, label: 'NOM', required: true, autofocus: true, error: 'Veuillez renseigner votre nom.' %>
-                  <%= f.input :first_name, label: 'PRENOM', required: true, autofocus: true, error: 'Veuillez renseigner votre prénom.' %>
+                  <%= f.input :first_name, label: 'PRÉNOM', required: true, autofocus: true, error: 'Veuillez renseigner votre prénom.' %>
                   <%= f.input :email, label: 'EMAIL', required: true, autofocus: true, error: 'Veuillez renseigner correctement votre email.' %>
+                  <%= f.input :card_number, label: 'NUMÉRO DE CARTE (13 CHIFFRES)', required: true, autofocus: true, error: 'Veuillez renseigner correctement votre email.' %>
                 </div>
                 <div class="col-xs-6">
                   <%= f.input :address, label: 'ADDRESSE', required: true, autofocus: true, error: 'Veuillez renseigner votre addresse.' %>
                   <%= f.input :postal_code, label: 'CODE POSTAL', required: true, autofocus: true, error: 'Veuillez vérifier le format de votre code postal.' %>
                   <%= f.input :city, label: 'VILLE', required: true, autofocus: true, error: 'Veuillez renseigner votre ville.' %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <p>Dites nous les domaines que vous aimez et dans lesquels vous souhaiteriez tester un produit</p>
-                  <div class="form-product">
-                    <%= f.input :general_diy, label: "Bricolage général"%>
-                    <%= f.input :electricity, label: "Electricité"%>
-                    <%= f.input :plumbing, label: "Plomberie"%>
-                    <%= f.input :building, label: "Batiment"%>
-                    <%= f.input :gardening, label: "Jardinage"%>
-                    <%= f.input :decoration, label: "Décoration"%>
-                  </div>
                 </div>
               </div>
 
