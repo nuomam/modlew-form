@@ -21,7 +21,7 @@ class RegistrationStepsController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation, :photo, :construction_type, :construction_surface, :general_diy, :electricity, :plumbing, :building, :gardening, :decoration, :phone_number, :card_number)
+    params.require(:user).permit(:facebook_profile, :twitter_profile, :instagram_profile, :youtube_channel, :personnal_blog, :motivation, :photo, :construction_type, :construction_surface, :general_diy, :electricity, :plumbing, :building, :gardening, :decoration, :phone_number, :card_number, :construction_color, :weldom_tester)
   end
 
 

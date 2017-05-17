@@ -20,6 +20,7 @@
                   <%= f.input :first_name, label: 'PRÉNOM', required: true, autofocus: true, error: 'Veuillez renseigner votre prénom.' %>
                   <%= f.input :email, label: 'EMAIL', required: true, autofocus: true, error: 'Veuillez renseigner correctement votre email.' %>
                   <%= f.input :card_number, label: 'NUMÉRO DE CARTE (13 CHIFFRES)', autofocus: true %>
+                  <%= f.association :store, label: 'NUMÉRO DE CARTE (13 CHIFFRES)' %>
                 </div>
                 <div class="col-xs-6">
                   <%= f.input :address, label: 'ADRESSE', required: true, autofocus: true, error: 'Veuillez renseigner votre addresse.' %>
