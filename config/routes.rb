@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :registration_steps
   get '/confirmation/', to: 'pages#confirmation', as: 'confirmation'
+  get '/export_csv/', to: 'pages#export_csv', as: 'export_csv'
   # get "/admin", to: 'admin/admins#index'
   # namespace :admin do
   #   resources :users

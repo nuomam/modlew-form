@@ -1,0 +1,5 @@
+<% headers = ['ID', 'NOM', 'PRENOM', 'EMAIL', 'ADRESSE', 'CODE POSTAL', 'VILLE', 'TELEPHONE', 'MAGASIN PROCHE', 'NUMERO CARTE', 'REGLEMENT', 'NEWSLETTER', 'TYPE CHANTIER', 'SURFACE CHANTIER', 'PHOTO', 'COULEUR', 'FACEBOOK', 'TWITTER', 'INSTAGRAM', 'YOUTUBE', 'BLOG', 'MOTIVATION', 'TESTEUR' ] %>
+<%= CSV.generate_line(headers, options = {col_sep: '|'}) %>
+<% @users.each do |user| %>
+<%= CSV.generate_line([user.id, user.last_name, user.first_name, user.email, user.address, user.postal_code, user.city, user.phone_number, !user.store.nil? ? user.store.name : nil, user.card_number, user.policy_agreement, user.weldom_newsletter, user.construction_type, user.construction_surface, user.photo? ? cl_image_path(user.photo.path) : nil, user.construction_color, user.facebook_profile, user.twitter_profile, user.instagram_profile, user.youtube_channel, user.personnal_blog, user.motivation, user.weldom_tester], options = {col_sep: '|'}) %>
+<% end %>
