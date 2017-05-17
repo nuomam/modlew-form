@@ -10,12 +10,12 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="form-container">
-          <p>Vous pouvez nous donner ci-dessous des précisions sur votre chantier.</p>
+          <p>Merci de nous donner ci-dessous des précisions sur votre chantier.</p>
           <%= simple_form_for @user, url: wizard_path do |f| %>
             <%= f.error_notification %>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier", collection: ['Repeindre un meuble de cuisine', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépi (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de contruction" %>
+                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier", collection: ['Repeindre ses meubles de cuisine (hors effet patiné)', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépi (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de projet" %>
               </div>
               <div class="col-xs-6">
                 <%= f.input :construction_surface, autofocus: true, label: "Estimation de surface à peindre (1 couche) en m2" %>
@@ -23,7 +23,7 @@
             </div>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :photo, as: :attachinary, label: "Téléchargement de la photo du chantier à réaliser" %>
+                <%= f.input :photo, as: :attachinary, required: true, label: "Téléchargement de la photo du chantier à réaliser" %>
               </div>
               <div class="col-xs-6">
                 <%= f.input :construction_color, label: "Choix de la couleur", collection: ['blanc', 'gris clair', 'taupe', 'rouge', 'bleu', 'je ne sais pas'], prompt: "Choisir une couleur" %>
@@ -31,11 +31,11 @@
             </div>
         </div>
         <div class="form-container">
-          <p>Vous pouvez ci-dessous nous indiquer vos réseaux sociaux</p>
+          <p>Merci de nous préciser vos réseaux sociaux</p>
 
               <%= f.input :facebook_profile, autofocus: true, label: "Profil Facebook" %>
-              <%= f.input :twitter_profile, autofocus: true, label: "Profil twitter" %>
-              <%= f.input :instagram_profile, autofocus: true, label: "Profil instagram" %>
+              <%= f.input :twitter_profile, autofocus: true, label: "Profil Twitter" %>
+              <%= f.input :instagram_profile, autofocus: true, label: "Profil Instagram" %>
               <%= f.input :youtube_channel, autofocus: true, label: "Chaine Youtube" %>
               <%= f.input :personnal_blog, autofocus: true, label: "Blog personnel" %>
 
@@ -68,7 +68,7 @@
           </div> -->
         </div>
         <div class="form-container container-btn">
-          <p>Nos clients testeurs rédigeront leurs avis sur nos produits. Pouvez-vous nous parler
+          <p>Les clients testeurs devront rédiger leurs avis sur nos produits. Pouvez-vous nous parler
           de votre projet en quelques lignes ? Ce texte restera confidentiel, il nous
           donnera un aperçu de votre style rédactionnel.</p>
           <%= f.input :motivation, autofocus: true %>
