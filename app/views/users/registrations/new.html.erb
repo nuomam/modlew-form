@@ -31,7 +31,7 @@
               </div>
 
               <div class="form-agreement">
-                <%= f.input :policy_agreement, label: "J'accepte le #{link_to 'règlement', 'http://imageme.wibilong.com/weldom/reglement_clientstesteurs_weldom.pdf'} j'ai bien pris connaissance du #{link_to 'document de consentement', 'http://imageme.wibilong.com/weldom/Charte-d-usage-des-clients-testeurs-weldom.pdf'} que je devrai signer à la remise des produits dans mon magasin.".html_safe, required: true, error: 'Veuillez accepter le règlement.' %>
+                <%= f.input :policy_agreement, label: "J'accepte le #{link_to 'règlement', 'http://imageme.wibilong.com/weldom/reglement_clientstesteurs_weldom.pdf'} et j'ai bien pris connaissance du #{link_to 'document de consentement', 'http://imageme.wibilong.com/weldom/Charte-d-usage-des-clients-testeurs-weldom.pdf'} que je devrai signer à la remise des produits dans mon magasin.".html_safe, required: true, error: 'Veuillez accepter le règlement.' %>
                 <%= f.input :weldom_newsletter,label: "J'accepte de recevoir les informations Weldom sur cette email.", required: false, autofocus: true %>
                 <p>Des questions sur ces tests ? Posez-les sur <a href="http://www.facebook.com/weldom" target="_blank">www.facebook.com/weldom</a> !</p>
               </div>
