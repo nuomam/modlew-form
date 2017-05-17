@@ -19,17 +19,18 @@
                   <%= f.input :last_name, label: 'NOM', required: true, autofocus: true, error: 'Veuillez renseigner votre nom.' %>
                   <%= f.input :first_name, label: 'PRÉNOM', required: true, autofocus: true, error: 'Veuillez renseigner votre prénom.' %>
                   <%= f.input :email, label: 'EMAIL', required: true, autofocus: true, error: 'Veuillez renseigner correctement votre email.' %>
-                  <%= f.input :card_number, label: 'NUMÉRO DE CARTE (13 CHIFFRES)', autofocus: true, error: 'Veuillez renseigner correctement votre email.' %>
+                  <%= f.input :card_number, label: 'NUMÉRO DE CARTE (13 CHIFFRES)', autofocus: true %>
                 </div>
                 <div class="col-xs-6">
                   <%= f.input :address, label: 'ADRESSE', required: true, autofocus: true, error: 'Veuillez renseigner votre addresse.' %>
                   <%= f.input :postal_code, label: 'CODE POSTAL', required: true, autofocus: true, error: 'Veuillez vérifier le format de votre code postal.' %>
                   <%= f.input :city, label: 'VILLE', required: true, autofocus: true, error: 'Veuillez renseigner votre ville.' %>
+                  <%= f.input :phone_number, label: 'NUMÉRO DE TÉLÉPHONE', required: true, autofocus: true, error: 'Veuillez renseigner votre numéro de téléphone.' %>
                 </div>
               </div>
 
               <div class="form-agreement">
-                <%= f.input :policy_agreement, label: "J'accepte le #{link_to 'règlement.', 'http://imageme.wibilong.com/weldom/reglement_clientstesteurs_weldom.pdf'}".html_safe, required: true, error: 'Veuillez accepter le règlement.' %>
+                <%= f.input :policy_agreement, label: "J'accepte le #{link_to 'règlement', 'http://imageme.wibilong.com/weldom/reglement_clientstesteurs_weldom.pdf'} j'ai bien pris connaissance du #{link_to 'document de consentement', 'http://imageme.wibilong.com/weldom/Charte-d-usage-des-clients-testeurs-weldom.pdf'} que je devrai signer à la remise des produits dans mon magasin.".html_safe, required: true, error: 'Veuillez accepter le règlement.' %>
                 <%= f.input :weldom_newsletter,label: "J'accepte de recevoir les informations Weldom sur cette email.", required: false, autofocus: true %>
                 <p>Des questions sur ces tests ? Posez-les sur <a href="http://www.facebook.com/weldom" target="_blank">www.facebook.com/weldom</a> !</p>
               </div>

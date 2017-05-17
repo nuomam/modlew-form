@@ -15,7 +15,7 @@
             <%= f.error_notification %>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier", collection: ['Repeindre ses meubles de cuisine (hors effet patiné)', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépi (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de projet" %>
+                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier (1)", collection: ['Repeindre ses meubles de cuisine (hors effet patiné)', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépi (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de projet" %>
               </div>
               <div class="col-xs-6">
                 <%= f.input :construction_surface, autofocus: true, label: "Estimation de surface à peindre (1 couche) en m2" %>
@@ -29,6 +29,12 @@
                 <%= f.input :construction_color, label: "Choix de la couleur", collection: ['blanc', 'gris clair', 'taupe', 'rouge', 'bleu', 'je ne sais pas'], prompt: "Choisir une couleur" %>
               </div>
             </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="construction-mention">(1) Tests à réaliser entre juillet et aout 2017. Prévoir le temps d’un weekend pour mener à bien les travaux (temps du chantier + temps de séchage avant remise en service). Choix entre les 6 teintes les plus usitées. Outils non fournis.
+                </p>
+              </div>
+            </div>
         </div>
         <div class="form-container">
           <p>Merci de nous préciser vos réseaux sociaux</p>
@@ -38,34 +44,6 @@
               <%= f.input :instagram_profile, autofocus: true, label: "Profil Instagram" %>
               <%= f.input :youtube_channel, autofocus: true, label: "Chaine Youtube" %>
               <%= f.input :personnal_blog, autofocus: true, label: "Blog personnel" %>
-
-
-
-
-<!--             <div class="form-inputs">
-              <div class="form-group">
-                <div class="input-group"><p>Facebook :</p>
-                  <div class="input-group-addon">http://www.facebook.com/</div>
-                  <%= f.input :facebook_profile, autofocus: true, label: false %>
-                </div>
-                <div class="input-group">Twitter :
-                  <div class="input-group-addon">http://twitter.com/</div>
-                  <%= f.input :twitter_profile, autofocus: true, label: false %>
-                </div>
-                <div class="input-group">Instragram :
-                  <div class="input-group-addon">http://instagram.com/</div>
-                  <%= f.input :instagram_profile, autofocus: true, label: false %>
-                </div>
-                <div class="input-group">Youtube :
-                  <div class="input-group-addon">http://youtube.com/</div>
-                  <%= f.input :youtube_channel, autofocus: true, label: false %>
-                </div>
-              <div class="input-group input-inline">Blog personnel :
-                <%= f.input :personnal_blog, autofocus: true, label: false %>
-              </div>
-            </div>
-
-          </div> -->
         </div>
         <div class="form-container container-btn">
           <p>Les clients testeurs devront rédiger leurs avis sur nos produits. Pouvez-vous nous parler
