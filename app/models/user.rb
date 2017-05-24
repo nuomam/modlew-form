@@ -4,7 +4,7 @@ class User < ApplicationRecord
   belongs_to :store
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: false
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address , presence: true
@@ -14,4 +14,12 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   # validates :construction_type, inclusion: { in: ["Repeindre un meuble de cuisine", "Repeindre un escalier", "Repeindre un carrelage de salle de bain"] }
   has_attachment :photo
+
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
+  end
 end
