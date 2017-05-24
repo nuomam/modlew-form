@@ -23,7 +23,7 @@
             </div>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :photo, as: :attachinary, required: true, label: "Téléchargement de la photo du chantier à réaliser" %>
+                <%= f.input :photo, required: true, as: :attachinary, label: "Téléchargement de la photo du chantier à réaliser" %>
               </div>
               <div class="col-xs-6">
                 <%= f.input :construction_color, label: "Choix de la couleur", collection: ['blanc', 'gris clair', 'taupe', 'rouge', 'gris foncé', 'je ne sais pas'], prompt: "Choisir une couleur" %>
