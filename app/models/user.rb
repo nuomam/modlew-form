@@ -10,8 +10,14 @@ class User < ApplicationRecord
   validates :address , presence: true
   validates :postal_code, presence: true, format: { with: /(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}/ }
   validates :city, presence: true
-  validates :policy_agreement, presence: true
   validates :phone_number, presence: true
+  #validates on update
+  validates :photo, presence: true, on: :update
+  validates :construction_type, presence: true, on: :update
+  validates :weldom_tester, presence: true, on: :update
+  validates :policy_agreement, presence: true, on: :update
+
+
   # validates :construction_type, inclusion: { in: ["Repeindre un meuble de cuisine", "Repeindre un escalier", "Repeindre un carrelage de salle de bain"] }
   has_attachment :photo
 
