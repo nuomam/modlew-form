@@ -15,7 +15,7 @@
             <%= f.error_notification %>
             <div class="row">
               <div class="col-xs-6">
-                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier (1)", collection: ['Peindre ses meubles de cuisine (hors effet patiné)', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépi (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de projet", error: 'Veuillez définir le type de chantier.' %>
+                <%= f.input :construction_type, required: true, autofocus: true, label: "Type de chantier (1)", collection: ['Peindre ses meubles de cuisine (hors effet patiné)', 'Peindre un escalier en bois', 'Peindre un sol carrelé', 'Peindre sa faïence de salle de bain', 'Peindre un lambris', 'Recouvrir un plan de travail/ une crédence (enduit coloré ou béton)', 'Recouvrir un crépis (enduit coloré ou béton)', 'Recouvrir un carrelage mural (enduit coloré ou béton)'], prompt: "Choisir un type de projet", error: 'Veuillez définir le type de chantier.' %>
               </div>
               <div class="col-xs-6">
                 <%= f.input :construction_surface, autofocus: true, label: "Estimation de surface à peindre (1 couche) en m2" %>
